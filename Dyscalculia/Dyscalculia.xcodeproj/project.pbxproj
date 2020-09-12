@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51198863250C8C360034F0DE /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198862250C8C360034F0DE /* CGRect+Extension.swift */; };
+		51198865250C8C450034F0DE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198864250C8C450034F0DE /* Int+Extension.swift */; };
+		51198867250C8C520034F0DE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198866250C8C520034F0DE /* String+Extension.swift */; };
+		51198869250C8C620034F0DE /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198868250C8C620034F0DE /* CGFloat+Extension.swift */; };
+		51CE6A6E25056B4100D82032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A6D25056B4100D82032 /* AppDelegate.swift */; };
+		51CE6A7025056B4100D82032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A6F25056B4100D82032 /* SceneDelegate.swift */; };
+		51CE6A7225056B4100D82032 /* GuessDotsQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A7125056B4100D82032 /* GuessDotsQuantityViewController.swift */; };
+		51CE6A7525056B4100D82032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CE6A7325056B4100D82032 /* Main.storyboard */; };
+		51CE6A7725056B4300D82032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51CE6A7625056B4300D82032 /* Assets.xcassets */; };
+		51CE6A7A25056B4300D82032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51CE6A7825056B4300D82032 /* LaunchScreen.storyboard */; };
+		51CE6A8525056B4300D82032 /* DyscalculiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A8425056B4300D82032 /* DyscalculiaTests.swift */; };
+		51CE6A9025056B4300D82032 /* DyscalculiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A8F25056B4300D82032 /* DyscalculiaUITests.swift */; };
+		51CE6AA02506DA1C00D82032 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A9F2506DA1C00D82032 /* CircleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51CE6A8125056B4300D82032 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51CE6A6225056B4100D82032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CE6A6925056B4100D82032;
+			remoteInfo = Dyscalculia;
+		};
+		51CE6A8C25056B4300D82032 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51CE6A6225056B4100D82032 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CE6A6925056B4100D82032;
+			remoteInfo = Dyscalculia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51198862250C8C360034F0DE /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		51198864250C8C450034F0DE /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		51198866250C8C520034F0DE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		51198868250C8C620034F0DE /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		51CE6A6A25056B4100D82032 /* Dyscalculia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dyscalculia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CE6A6D25056B4100D82032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		51CE6A6F25056B4100D82032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		51CE6A7125056B4100D82032 /* GuessDotsQuantityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessDotsQuantityViewController.swift; sourceTree = "<group>"; };
+		51CE6A7425056B4100D82032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51CE6A7625056B4300D82032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51CE6A7925056B4300D82032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51CE6A7B25056B4300D82032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CE6A8025056B4300D82032 /* DyscalculiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DyscalculiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CE6A8425056B4300D82032 /* DyscalculiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyscalculiaTests.swift; sourceTree = "<group>"; };
+		51CE6A8625056B4300D82032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CE6A8B25056B4300D82032 /* DyscalculiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DyscalculiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CE6A8F25056B4300D82032 /* DyscalculiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyscalculiaUITests.swift; sourceTree = "<group>"; };
+		51CE6A9125056B4300D82032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CE6A9F2506DA1C00D82032 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51CE6A6725056B4100D82032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A7D25056B4300D82032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A8825056B4300D82032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5119886A250C8C930034F0DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51198868250C8C620034F0DE /* CGFloat+Extension.swift */,
+				51198862250C8C360034F0DE /* CGRect+Extension.swift */,
+				51198864250C8C450034F0DE /* Int+Extension.swift */,
+				51198866250C8C520034F0DE /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51CE6A6125056B4100D82032 = {
+			isa = PBXGroup;
+			children = (
+				51CE6A6C25056B4100D82032 /* Dyscalculia */,
+				51CE6A8325056B4300D82032 /* DyscalculiaTests */,
+				51CE6A8E25056B4300D82032 /* DyscalculiaUITests */,
+				51CE6A6B25056B4100D82032 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51CE6A6B25056B4100D82032 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51CE6A6A25056B4100D82032 /* Dyscalculia.app */,
+				51CE6A8025056B4300D82032 /* DyscalculiaTests.xctest */,
+				51CE6A8B25056B4300D82032 /* DyscalculiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51CE6A6C25056B4100D82032 /* Dyscalculia */ = {
+			isa = PBXGroup;
+			children = (
+				51CE6A6D25056B4100D82032 /* AppDelegate.swift */,
+				51CE6A6F25056B4100D82032 /* SceneDelegate.swift */,
+				51CE6A7125056B4100D82032 /* GuessDotsQuantityViewController.swift */,
+				5119886A250C8C930034F0DE /* Extensions */,
+				51CE6A7325056B4100D82032 /* Main.storyboard */,
+				51CE6A9F2506DA1C00D82032 /* CircleView.swift */,
+				51CE6A7625056B4300D82032 /* Assets.xcassets */,
+				51CE6A7825056B4300D82032 /* LaunchScreen.storyboard */,
+				51CE6A7B25056B4300D82032 /* Info.plist */,
+			);
+			path = Dyscalculia;
+			sourceTree = "<group>";
+		};
+		51CE6A8325056B4300D82032 /* DyscalculiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				51CE6A8425056B4300D82032 /* DyscalculiaTests.swift */,
+				51CE6A8625056B4300D82032 /* Info.plist */,
+			);
+			path = DyscalculiaTests;
+			sourceTree = "<group>";
+		};
+		51CE6A8E25056B4300D82032 /* DyscalculiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				51CE6A8F25056B4300D82032 /* DyscalculiaUITests.swift */,
+				51CE6A9125056B4300D82032 /* Info.plist */,
+			);
+			path = DyscalculiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51CE6A6925056B4100D82032 /* Dyscalculia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CE6A9425056B4300D82032 /* Build configuration list for PBXNativeTarget "Dyscalculia" */;
+			buildPhases = (
+				51CE6A6625056B4100D82032 /* Sources */,
+				51CE6A6725056B4100D82032 /* Frameworks */,
+				51CE6A6825056B4100D82032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dyscalculia;
+			productName = Dyscalculia;
+			productReference = 51CE6A6A25056B4100D82032 /* Dyscalculia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51CE6A7F25056B4300D82032 /* DyscalculiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CE6A9725056B4300D82032 /* Build configuration list for PBXNativeTarget "DyscalculiaTests" */;
+			buildPhases = (
+				51CE6A7C25056B4300D82032 /* Sources */,
+				51CE6A7D25056B4300D82032 /* Frameworks */,
+				51CE6A7E25056B4300D82032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CE6A8225056B4300D82032 /* PBXTargetDependency */,
+			);
+			name = DyscalculiaTests;
+			productName = DyscalculiaTests;
+			productReference = 51CE6A8025056B4300D82032 /* DyscalculiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		51CE6A8A25056B4300D82032 /* DyscalculiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CE6A9A25056B4300D82032 /* Build configuration list for PBXNativeTarget "DyscalculiaUITests" */;
+			buildPhases = (
+				51CE6A8725056B4300D82032 /* Sources */,
+				51CE6A8825056B4300D82032 /* Frameworks */,
+				51CE6A8925056B4300D82032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51CE6A8D25056B4300D82032 /* PBXTargetDependency */,
+			);
+			name = DyscalculiaUITests;
+			productName = DyscalculiaUITests;
+			productReference = 51CE6A8B25056B4300D82032 /* DyscalculiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51CE6A6225056B4100D82032 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = nfa;
+				TargetAttributes = {
+					51CE6A6925056B4100D82032 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					51CE6A7F25056B4300D82032 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 51CE6A6925056B4100D82032;
+					};
+					51CE6A8A25056B4300D82032 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 51CE6A6925056B4100D82032;
+					};
+				};
+			};
+			buildConfigurationList = 51CE6A6525056B4100D82032 /* Build configuration list for PBXProject "Dyscalculia" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51CE6A6125056B4100D82032;
+			productRefGroup = 51CE6A6B25056B4100D82032 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51CE6A6925056B4100D82032 /* Dyscalculia */,
+				51CE6A7F25056B4300D82032 /* DyscalculiaTests */,
+				51CE6A8A25056B4300D82032 /* DyscalculiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51CE6A6825056B4100D82032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CE6A7A25056B4300D82032 /* LaunchScreen.storyboard in Resources */,
+				51CE6A7725056B4300D82032 /* Assets.xcassets in Resources */,
+				51CE6A7525056B4100D82032 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A7E25056B4300D82032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A8925056B4300D82032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51CE6A6625056B4100D82032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CE6A7225056B4100D82032 /* GuessDotsQuantityViewController.swift in Sources */,
+				51198867250C8C520034F0DE /* String+Extension.swift in Sources */,
+				51198869250C8C620034F0DE /* CGFloat+Extension.swift in Sources */,
+				51CE6AA02506DA1C00D82032 /* CircleView.swift in Sources */,
+				51CE6A6E25056B4100D82032 /* AppDelegate.swift in Sources */,
+				51198865250C8C450034F0DE /* Int+Extension.swift in Sources */,
+				51CE6A7025056B4100D82032 /* SceneDelegate.swift in Sources */,
+				51198863250C8C360034F0DE /* CGRect+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A7C25056B4300D82032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CE6A8525056B4300D82032 /* DyscalculiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CE6A8725056B4300D82032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CE6A9025056B4300D82032 /* DyscalculiaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51CE6A8225056B4300D82032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CE6A6925056B4100D82032 /* Dyscalculia */;
+			targetProxy = 51CE6A8125056B4300D82032 /* PBXContainerItemProxy */;
+		};
+		51CE6A8D25056B4300D82032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CE6A6925056B4100D82032 /* Dyscalculia */;
+			targetProxy = 51CE6A8C25056B4300D82032 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		51CE6A7325056B4100D82032 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51CE6A7425056B4100D82032 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		51CE6A7825056B4300D82032 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51CE6A7925056B4300D82032 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51CE6A9225056B4300D82032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51CE6A9325056B4300D82032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51CE6A9525056B4300D82032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = Dyscalculia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.Dyscalculia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51CE6A9625056B4300D82032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = Dyscalculia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.Dyscalculia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51CE6A9825056B4300D82032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = DyscalculiaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.DyscalculiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dyscalculia.app/Dyscalculia";
+			};
+			name = Debug;
+		};
+		51CE6A9925056B4300D82032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = DyscalculiaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.DyscalculiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dyscalculia.app/Dyscalculia";
+			};
+			name = Release;
+		};
+		51CE6A9B25056B4300D82032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = DyscalculiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.DyscalculiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dyscalculia;
+			};
+			name = Debug;
+		};
+		51CE6A9C25056B4300D82032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QDK6789A6;
+				INFOPLIST_FILE = DyscalculiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nfa.DyscalculiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dyscalculia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51CE6A6525056B4100D82032 /* Build configuration list for PBXProject "Dyscalculia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CE6A9225056B4300D82032 /* Debug */,
+				51CE6A9325056B4300D82032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CE6A9425056B4300D82032 /* Build configuration list for PBXNativeTarget "Dyscalculia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CE6A9525056B4300D82032 /* Debug */,
+				51CE6A9625056B4300D82032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CE6A9725056B4300D82032 /* Build configuration list for PBXNativeTarget "DyscalculiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CE6A9825056B4300D82032 /* Debug */,
+				51CE6A9925056B4300D82032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CE6A9A25056B4300D82032 /* Build configuration list for PBXNativeTarget "DyscalculiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CE6A9B25056B4300D82032 /* Debug */,
+				51CE6A9C25056B4300D82032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51CE6A6225056B4100D82032 /* Project object */;
+}

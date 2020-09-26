@@ -17,7 +17,7 @@ class GuessDotsQuantityViewController: UIViewController {
     @IBOutlet weak var spelledOutNumber: UILabel!
     @IBOutlet weak var numeralNumber: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
-    
+    @IBOutlet weak var circlesView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,10 @@ class GuessDotsQuantityViewController: UIViewController {
         view.addGestureRecognizer(singleTap)
         
         self.view.backgroundColor = UIColor.white
-        drawCircles()
+        generateCircles()
     }
     
-    func drawCircles(){
+    func generateCircles(){
         for case let circle as CircleView in self.view.subviews {
             circle.removeFromSuperview()
         }
@@ -52,28 +52,66 @@ class GuessDotsQuantityViewController: UIViewController {
         var i = 0
         while i < numberOfCircles {
             let circleView = CircleView(frame: CGRect(x: 0.0, y: 0.0, width: circleWidth, height: circleHeight))
-            circleView.frame.origin = circleView.frame.randomPoint
             circles.append(circleView)
-            print(circles.count)
-            for c in circles {
-                self.view.addSubview(circleView)
-                
-                for c in circles {
-                    if(c.frame.intersects(circleView.frame)) {
-                        //The two views are "overlapping"
-                        circleView.frame.origin = circleView.frame.randomPoint
-                    }
-                    
-                    while !UIScreen.main.bounds.contains(circleView.frame.origin) {
-                        circleView.frame.origin = CGPoint()
-                        circleView.frame.origin = circleView.frame.randomPoint
-                    }
-                }
-                print(c.frame.origin)
-            }
             i += 1
         }
+        drawCircles()
+    }
+    
+    func drawCircles(){
+        
+        for c in circles {
+            
+            let prev = circles.before(c)
+            let after = circles.after(c)
+
+            c.center = getRandomPoint()
+             
+            if let prev = prev {
+                if distance(prev.center, c.center) <= 200 {
+                    c.center = getRandomPoint()
+                    while distance(prev.center, c.center) <= 200 {
+                        c.center = getRandomPoint()
+                    }
+                    
+                }
+            }
+            
+            if let after = after {
+                if distance(after.center, c.center) <= 200 {
+                    c.center = getRandomPoint()
+                    while distance(after.center, c.center) <= 200 {
+                        c.center = getRandomPoint()
+                    }
+                }
+            }
+
+            
+        }
+        
+            
+        for c in circles {
+            self.view.addSubview(c)
+        }
+                    
         startTime = (NSDate.timeIntervalSinceReferenceDate)
+    }
+    
+    func getRandomPoint() -> CGPoint {
+        let viewMidX = self.circlesView.bounds.midX
+        let viewMidY = self.circlesView.bounds.midY
+
+        let xPosition = self.circlesView.frame.midX - viewMidX + CGFloat(arc4random_uniform(UInt32(viewMidX*2)))
+        let yPosition = self.circlesView.frame.midY - viewMidY + CGFloat(arc4random_uniform(UInt32(viewMidY*2)))
+        let point = CGPoint(x: xPosition, y: yPosition)
+        return point
+    }
+    
+    
+    func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
+        let xDist = a.x - b.x
+        let yDist = a.y - b.y
+        return CGFloat(sqrt(xDist * xDist + yDist * yDist))
     }
     
     
@@ -90,7 +128,7 @@ class GuessDotsQuantityViewController: UIViewController {
             timerLabel.text = String(String(elapsed).prefix(4)) + " Seconds"
             
         } else {
-            drawCircles()
+            generateCircles()
         }
     }
 }
@@ -98,5 +136,38 @@ class GuessDotsQuantityViewController: UIViewController {
 
 
 
+
+
+extension BidirectionalCollection where Iterator.Element: Equatable {
+    typealias Element = Self.Iterator.Element
+
+    func after(_ item: Element, loop: Bool = false) -> Element? {
+        if let itemIndex = self.firstIndex(of: item) {
+            let lastItem: Bool = (index(after:itemIndex) == endIndex)
+            if loop && lastItem {
+                return self.first
+            } else if lastItem {
+                return nil
+            } else {
+                return self[index(after:itemIndex)]
+            }
+        }
+        return nil
+    }
+
+    func before(_ item: Element, loop: Bool = false) -> Element? {
+        if let itemIndex = self.firstIndex(of: item) {
+            let firstItem: Bool = (itemIndex == startIndex)
+            if loop && firstItem {
+                return self.last
+            } else if firstItem {
+                return nil
+            } else {
+                return self[index(before:itemIndex)]
+            }
+        }
+        return nil
+    }
+}
 
 

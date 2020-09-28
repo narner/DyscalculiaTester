@@ -34,7 +34,7 @@ class GuessDotsQuantityViewController: UIViewController {
         generateCircles()
     }
     
-    func generateCircles(){
+    func generateCircles() {
         for case let circle as CircleView in self.view.subviews {
             circle.removeFromSuperview()
         }
@@ -58,62 +58,50 @@ class GuessDotsQuantityViewController: UIViewController {
         drawCircles()
     }
     
-    func drawCircles(){
-        
-        for c in circles {
-            
-            let prev = circles.before(c)
-            let after = circles.after(c)
-
-            c.center = getRandomPoint()
-             
-            if let prev = prev {
-                if distance(prev.center, c.center) <= 200 {
-                    c.center = getRandomPoint()
-                    while distance(prev.center, c.center) <= 200 {
-                        c.center = getRandomPoint()
-                    }
-                    
-                }
-            }
-            
-            if let after = after {
-                if distance(after.center, c.center) <= 200 {
-                    c.center = getRandomPoint()
-                    while distance(after.center, c.center) <= 200 {
-                        c.center = getRandomPoint()
+    func drawCircles() {
+        for i in 0..<circles.count{
+            circles[i].center = getRandomPoint()
+            for j in 0..<circles.count{
+                if(i != j) {
+                    let comparingCentre = circles[j].center
+                    let dist = distance(comparingCentre, circles[i].center)
+                    if dist <= 50 {
+                        
+                        var newCenter = circles[i].center
+                        var centersVector = CGVector(dx: newCenter.x - comparingCentre.x, dy: newCenter.y - comparingCentre.y)
+                     
+                        centersVector.dx *= 51 / dist
+                        centersVector.dy *= 51 / dist
+                        newCenter.x = comparingCentre.x + centersVector.dx
+                        newCenter.y = comparingCentre.y + centersVector.dy
+                        circles[i].center = newCenter
                     }
                 }
             }
-
-            
         }
         
-            
         for c in circles {
             self.view.addSubview(c)
         }
-                    
+        
         startTime = (NSDate.timeIntervalSinceReferenceDate)
     }
     
     func getRandomPoint() -> CGPoint {
         let viewMidX = self.circlesView.bounds.midX
         let viewMidY = self.circlesView.bounds.midY
-
+        
         let xPosition = self.circlesView.frame.midX - viewMidX + CGFloat(arc4random_uniform(UInt32(viewMidX*2)))
         let yPosition = self.circlesView.frame.midY - viewMidY + CGFloat(arc4random_uniform(UInt32(viewMidY*2)))
         let point = CGPoint(x: xPosition, y: yPosition)
         return point
     }
     
-    
     func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
         let xDist = a.x - b.x
         let yDist = a.y - b.y
-        return CGFloat(sqrt(xDist * xDist + yDist * yDist))
+        return CGFloat(hypot(xDist, yDist))
     }
-    
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if spelledOutNumber.isHidden == true && numeralNumber.isHidden == true && timerLabel.isHidden == true {
@@ -132,42 +120,4 @@ class GuessDotsQuantityViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
-
-extension BidirectionalCollection where Iterator.Element: Equatable {
-    typealias Element = Self.Iterator.Element
-
-    func after(_ item: Element, loop: Bool = false) -> Element? {
-        if let itemIndex = self.firstIndex(of: item) {
-            let lastItem: Bool = (index(after:itemIndex) == endIndex)
-            if loop && lastItem {
-                return self.first
-            } else if lastItem {
-                return nil
-            } else {
-                return self[index(after:itemIndex)]
-            }
-        }
-        return nil
-    }
-
-    func before(_ item: Element, loop: Bool = false) -> Element? {
-        if let itemIndex = self.firstIndex(of: item) {
-            let firstItem: Bool = (itemIndex == startIndex)
-            if loop && firstItem {
-                return self.last
-            } else if firstItem {
-                return nil
-            } else {
-                return self[index(before:itemIndex)]
-            }
-        }
-        return nil
-    }
-}
-
 

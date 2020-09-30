@@ -19,7 +19,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-Km-ijl">
                                 <rect key="frame" x="80" y="37" width="736" height="340"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDq-6S-JS9">
+                                        <rect key="frame" x="210" y="140" width="316" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uDq-6S-JS9" firstAttribute="leading" secondItem="Ldm-Km-ijl" secondAttribute="leading" constant="210" id="OJN-D7-l0C"/>
+                                    <constraint firstItem="uDq-6S-JS9" firstAttribute="centerY" secondItem="Ldm-Km-ijl" secondAttribute="centerY" id="R8V-i7-dz5"/>
+                                    <constraint firstItem="uDq-6S-JS9" firstAttribute="centerX" secondItem="Ldm-Km-ijl" secondAttribute="centerX" id="x0R-tY-ONc"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHg-h9-KsX">
                                 <rect key="frame" x="33" y="9" width="42" height="22"/>
@@ -47,6 +60,7 @@
                     <navigationItem key="navigationItem" id="grt-8y-Q8L"/>
                     <connections>
                         <outlet property="circlesView" destination="Ldm-Km-ijl" id="f5S-XP-Dxn"/>
+                        <outlet property="colorLabel" destination="uDq-6S-JS9" id="AkS-by-ij2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7P-Xy-U3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

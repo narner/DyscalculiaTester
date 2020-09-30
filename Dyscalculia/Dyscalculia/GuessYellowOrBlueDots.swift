@@ -14,6 +14,10 @@ class GuessYellowOrBlueDots: UIViewController {
 
     var numberOfCircles: Int!
     var circles: [CircleView] = []
+    @IBOutlet weak var colorLabel: UILabel!
+
+    var yellowCircleCount = 0
+    var blueCircleCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +27,45 @@ class GuessYellowOrBlueDots: UIViewController {
         singleTap.numberOfTapsRequired = 1
         view.addGestureRecognizer(singleTap)
 
+        colorLabel.isHidden = true
         generateCircles()
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        generateCircles()
+        clearCircles()
+
+        if colorLabel.isHidden == true {
+            colorLabel.isHidden = false
+            checkColorAmmounts()
+            return
+        }
+        if colorLabel.isHidden == false {
+            colorLabel.isHidden = true
+            generateCircles()
+            return
+        }
     }
     
-    func generateCircles() {
+    func checkColorAmmounts() {
+        if yellowCircleCount > blueCircleCount {
+            colorLabel.text = "YELLOW"
+            colorLabel.textColor = .yellow
+        }
+        if blueCircleCount > yellowCircleCount {
+            colorLabel.text = "BLUE"
+            colorLabel.textColor = .blue
+        }
+    }
+    
+    func clearCircles() {
         for case let circle as CircleView in self.view.subviews {
             circle.removeFromSuperview()
         }
-
         circles.removeAll()
-        
-        numberOfCircles = Int.random(in: 1..<60)
+    }
+    
+    func generateCircles() {
+        numberOfCircles = Int.random(in: 1..<50)
         let circleWidth = CGFloat(25)
         let circleHeight = circleWidth
         
@@ -64,13 +92,13 @@ class GuessYellowOrBlueDots: UIViewController {
                 if(i != j) {
                     let comparingCentre = circles[j].center
                     let dist = distance(comparingCentre, circles[i].center)
-                    if dist <= 50 {
+                    if dist <= 25 {
                         
                         var newCenter = circles[i].center
                         var centersVector = CGVector(dx: newCenter.x - comparingCentre.x, dy: newCenter.y - comparingCentre.y)
                      
-                        centersVector.dx *= 51 / dist
-                        centersVector.dy *= 51 / dist
+                        centersVector.dx *= 26 / dist
+                        centersVector.dy *= 26 / dist
                         newCenter.x = comparingCentre.x + centersVector.dx
                         newCenter.y = comparingCentre.y + centersVector.dy
                         circles[i].center = newCenter
@@ -79,8 +107,8 @@ class GuessYellowOrBlueDots: UIViewController {
             }
         }
 
-        var yellowCircleCount = 0
-        var blueCircleCount = 0
+        yellowCircleCount = 0
+        blueCircleCount = 0
 
         for c in circles {
             self.view.addSubview(c)

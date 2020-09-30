@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension Int {
    var asWord: String {
     let numberValue = NSNumber(value: self)

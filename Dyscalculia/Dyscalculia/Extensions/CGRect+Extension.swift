@@ -11,8 +11,8 @@ import UIKit
 extension CGRect {
     var randomPoint: CGPoint {
         var point = CGPoint()
-            point.x = CGFloat.random(between: origin.x, and: origin.x + width)
-            point.y = CGFloat.random(between: origin.y, and: origin.y + height)
+        point.x = CGFloat.random(between: origin.x, and: origin.x + width)
+        point.y = CGFloat.random(between: origin.y, and: origin.y + height)
         return point
     }
 }

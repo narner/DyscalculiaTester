@@ -21,6 +21,7 @@
 		51CE6A8525056B4300D82032 /* DyscalculiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A8425056B4300D82032 /* DyscalculiaTests.swift */; };
 		51CE6A9025056B4300D82032 /* DyscalculiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A8F25056B4300D82032 /* DyscalculiaUITests.swift */; };
 		51CE6AA02506DA1C00D82032 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A9F2506DA1C00D82032 /* CircleView.swift */; };
+		51D7969C2524E7DB005FEA36 /* GuessYellowOrBlueDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D7969B2524E7DB005FEA36 /* GuessYellowOrBlueDots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		51CE6A8F25056B4300D82032 /* DyscalculiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyscalculiaUITests.swift; sourceTree = "<group>"; };
 		51CE6A9125056B4300D82032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51CE6A9F2506DA1C00D82032 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		51D7969B2524E7DB005FEA36 /* GuessYellowOrBlueDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessYellowOrBlueDots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				51CE6A6D25056B4100D82032 /* AppDelegate.swift */,
 				51CE6A6F25056B4100D82032 /* SceneDelegate.swift */,
 				51CE6A7125056B4100D82032 /* GuessDotsQuantityViewController.swift */,
+				51D7969B2524E7DB005FEA36 /* GuessYellowOrBlueDots.swift */,
 				5119886A250C8C930034F0DE /* Extensions */,
 				51CE6A7325056B4100D82032 /* Main.storyboard */,
 				51CE6A9F2506DA1C00D82032 /* CircleView.swift */,
@@ -293,6 +296,7 @@
 				51CE6A6E25056B4100D82032 /* AppDelegate.swift in Sources */,
 				51198865250C8C450034F0DE /* Int+Extension.swift in Sources */,
 				51CE6A7025056B4100D82032 /* SceneDelegate.swift in Sources */,
+				51D7969C2524E7DB005FEA36 /* GuessYellowOrBlueDots.swift in Sources */,
 				51198863250C8C360034F0DE /* CGRect+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

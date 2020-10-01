@@ -49,11 +49,11 @@ class GuessDotsQuantityViewController: UIViewController {
         let circleWidth = CGFloat(50)
         let circleHeight = circleWidth
         
-        var i = 0
-        while i < numberOfCircles {
-            let circleView = CircleView(frame: CGRect(x: 0.0, y: 0.0, width: circleWidth, height: circleHeight))
+        for _ in 0..<numberOfCircles {
+            let circleView = CircleView(frame: CGRect(origin: getRandomPoint(), size: (CGSize(width: circleWidth, height: circleHeight))))
+                
+            
             circles.append(circleView)
-            i += 1
         }
         drawCircles()
     }
@@ -94,8 +94,22 @@ class GuessDotsQuantityViewController: UIViewController {
         let xPosition = self.circlesView.frame.midX - viewMidX + CGFloat(arc4random_uniform(UInt32(viewMidX*2)))
         let yPosition = self.circlesView.frame.midY - viewMidY + CGFloat(arc4random_uniform(UInt32(viewMidY*2)))
         let point = CGPoint(x: xPosition, y: yPosition)
+        
+        if !validatePoint(point) {
+            return getRandomPoint()
+        }
         return point
     }
+
+    func validatePoint(_ point: CGPoint) -> Bool {
+        for circle in circles {
+            if distance(circle.frame.origin, point) <= 50 {
+                return false
+            }
+        }
+        return true
+    }
+
     
     func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
         let xDist = a.x - b.x

@@ -92,7 +92,6 @@ class GuessYellowOrBlueDots: UIViewController {
                     let comparingCentre = circles[j].center
                     let dist = distance(comparingCentre, circles[i].center)
                     if dist <= 25 {
-                        
                         var newCenter = circles[i].center
                         var centersVector = CGVector(dx: newCenter.x - comparingCentre.x, dy: newCenter.y - comparingCentre.y)
                      

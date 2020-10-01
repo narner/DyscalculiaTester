@@ -51,8 +51,6 @@ class GuessDotsQuantityViewController: UIViewController {
         
         for _ in 0..<numberOfCircles {
             let circleView = CircleView(frame: CGRect(origin: getRandomPoint(), size: (CGSize(width: circleWidth, height: circleHeight))))
-                
-            
             circles.append(circleView)
         }
         drawCircles()
@@ -66,7 +64,6 @@ class GuessDotsQuantityViewController: UIViewController {
                     let comparingCentre = circles[j].center
                     let dist = distance(comparingCentre, circles[i].center)
                     if dist <= 50 {
-                        
                         var newCenter = circles[i].center
                         var centersVector = CGVector(dx: newCenter.x - comparingCentre.x, dy: newCenter.y - comparingCentre.y)
                      
@@ -83,7 +80,6 @@ class GuessDotsQuantityViewController: UIViewController {
         for c in circles {
             self.view.addSubview(c)
         }
-        
         startTime = (NSDate.timeIntervalSinceReferenceDate)
     }
     

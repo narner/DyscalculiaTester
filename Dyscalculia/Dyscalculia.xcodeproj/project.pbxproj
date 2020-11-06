@@ -11,7 +11,6 @@
 		51198865250C8C450034F0DE /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198864250C8C450034F0DE /* Int+Extension.swift */; };
 		51198867250C8C520034F0DE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198866250C8C520034F0DE /* String+Extension.swift */; };
 		51198869250C8C620034F0DE /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51198868250C8C620034F0DE /* CGFloat+Extension.swift */; };
-		51BD2AF125216EAF0045C485 /* BidriectionallCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD2AF025216EAF0045C485 /* BidriectionallCollectionExtension.swift */; };
 		51CE6A6E25056B4100D82032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A6D25056B4100D82032 /* AppDelegate.swift */; };
 		51CE6A7025056B4100D82032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A6F25056B4100D82032 /* SceneDelegate.swift */; };
 		51CE6A7225056B4100D82032 /* GuessDotsQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE6A7125056B4100D82032 /* GuessDotsQuantityViewController.swift */; };
@@ -46,7 +45,6 @@
 		51198864250C8C450034F0DE /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		51198866250C8C520034F0DE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		51198868250C8C620034F0DE /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
-		51BD2AF025216EAF0045C485 /* BidriectionallCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidriectionallCollectionExtension.swift; sourceTree = "<group>"; };
 		51CE6A6A25056B4100D82032 /* Dyscalculia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dyscalculia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CE6A6D25056B4100D82032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51CE6A6F25056B4100D82032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				51198862250C8C360034F0DE /* CGRect+Extension.swift */,
 				51198864250C8C450034F0DE /* Int+Extension.swift */,
 				51198866250C8C520034F0DE /* String+Extension.swift */,
-				51BD2AF025216EAF0045C485 /* BidriectionallCollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				51CE6A7225056B4100D82032 /* GuessDotsQuantityViewController.swift in Sources */,
-				51BD2AF125216EAF0045C485 /* BidriectionallCollectionExtension.swift in Sources */,
 				51198867250C8C520034F0DE /* String+Extension.swift in Sources */,
 				51198869250C8C620034F0DE /* CGFloat+Extension.swift in Sources */,
 				51CE6AA02506DA1C00D82032 /* CircleView.swift in Sources */,

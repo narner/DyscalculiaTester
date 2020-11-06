@@ -19,6 +19,9 @@ class GuessDotsQuantityViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var circlesView: UIView!
     
+    let circleWidth = CGFloat(50)
+    let circleHeight = CGFloat(50)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,8 +49,6 @@ class GuessDotsQuantityViewController: UIViewController {
         circles.removeAll()
         
         numberOfCircles = Int.random(in: 1..<10)
-        let circleWidth = CGFloat(50)
-        let circleHeight = circleWidth
         
         for _ in 0..<numberOfCircles {
             let circleView = CircleView(frame: CGRect(origin: getRandomPoint(), size: (CGSize(width: circleWidth, height: circleHeight))))

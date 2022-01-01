@@ -1,6 +1,6 @@
 # Dyscalculia Tester
 
-Prototype Dyscalculia tests for iOS based on [Brian Butterworth](https://www.dyscalculia.org/experts/brian-butterworth)'s [cohttps://www.youtube.com/watch?v=p_Hqdqe84Uc&t=231s)tive tests](url).
+Prototype Dyscalculia tests for iOS based on [Brian Butterworth](https://www.dyscalculia.org/experts/brian-butterworth)'s [https://www.youtube.com/watch?v=p_Hqdqe84Uc&t=231s)tive tests](url).
 
 The app has two screens: one where you're asked to determine how many dots are on the screen and displays how long it took for you to guess the 
 ammount, and another that asks if there are more yellow or blue dots on the screen.
